@@ -1,7 +1,6 @@
 var gulp = require('gulp')
 var pug = require('gulp-pug')
 var postcss = require('gulp-postcss')
-var inlineCss = require('gulp-inline-css')
 var html2pdf = require('gulp-html2pdf')
 
 gulp.task('css', function () {
@@ -17,7 +16,6 @@ gulp.task('html', ['css'], function () {
   .pipe(pug({
     pretty: true
   }))
-  //.pipe(inlineCss())
   .pipe(gulp.dest('./dest/html/'))
 })
 
